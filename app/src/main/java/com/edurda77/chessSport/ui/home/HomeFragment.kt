@@ -7,6 +7,8 @@ import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -75,7 +77,9 @@ class HomeFragment : Fragment() {
                 is HomeState.SuccessConnect -> {
                     val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse((currentState as HomeState.SuccessConnect).remoteData.urlPath))
                     startActivity(browserIntent)
-                    view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
+                    }, 2000)
                 }
                 else -> {
                     view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
