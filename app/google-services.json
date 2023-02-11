@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "174799647799",
+    "project_id": "test-web-sport",
+    "storage_bucket": "test-web-sport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174799647799:android:414d6c87410ed2d0bafbb2",
+        "android_client_info": {
+          "package_name": "com.edurda77.chessSport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJefjgjGUvhjykBAL8OoaXVnPlIxOyJoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174799647799:android:35d75ae732d13737bafbb2",
+        "android_client_info": {
+          "package_name": "com.edurda77.testsport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJefjgjGUvhjykBAL8OoaXVnPlIxOyJoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
