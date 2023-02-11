@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_rect"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.QuizFragment">
 
 
     <androidx.appcompat.widget.AppCompatTextView
