@@ -7,4 +7,5 @@
     <string name="quest">Quest</string>
     <string name="result">Result:</string>
     <string name="repeat">Repeat?</string>
+    <string name="chess_quiz">Chess quiz</string>
 </resources>
