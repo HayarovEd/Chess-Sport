@@ -1,23 +1,31 @@
 package com.edurda77.chessSport.ui.home
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.edurda77.chessSport.R
 import com.edurda77.chessSport.databinding.FragmentHomeBinding
+import com.edurda77.chessSport.utils.SAVED_SETTINGS
+import com.edurda77.chessSport.utils.URL
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
+    private val viewModel by viewModels<HomeViewModel>()
+    private lateinit var currentState: HomeState
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,9 +37,52 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.startBt.setOnClickListener {
-            view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
+        currentState = HomeState.Loading
+        val sharedPref =
+            requireContext().getSharedPreferences(SAVED_SETTINGS, Context.MODE_PRIVATE)
+        val sharedUrl = sharedPref.getString(URL, "")
+        viewModel.getFromLocal(
+            checkedInternetConnection = checkedInternetConnection(),
+            pathUrl = sharedUrl ?: ""
+        )
+        viewModel.showData.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is HomeState.Loading -> {
+                    binding.startBt.isVisible = false
+                    currentState =  state
+                }
+                is HomeState.NoInternet -> {
+                    Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
+                    binding.startBt.isVisible = true
+                    currentState =  state
+                }
+                is HomeState.SuccessConnect -> {
+                    binding.startBt.isVisible = true
+                    val editor = sharedPref.edit()
+                    editor.putString(URL, state.remoteData.urlPath)
+                    editor.apply()
+                    currentState =  state
+                }
+                is HomeState.Error -> {
+                    binding.startBt.isVisible = true
+                    currentState =  state
+                    Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
+                }
+            }
         }
+        binding.startBt.setOnClickListener {
+            when (currentState) {
+                is HomeState.SuccessConnect -> {
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse((currentState as HomeState.SuccessConnect).remoteData.urlPath))
+                    startActivity(browserIntent)
+                    view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
+                }
+                else -> {
+                    view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
+                }
+            }
+        }
+
     }
 
     override fun onDestroyView() {

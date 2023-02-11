@@ -1,62 +1,33 @@
 {
   "project_info": {
-    "project_number": "174799647799",
-    "project_id": "test-web-sport",
-    "storage_bucket": "test-web-sport.appspot.com"
+    "project_number": "203129352359",
+    "project_id": "chess-d8552",
+    "storage_bucket": "chess-d8552.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:174799647799:android:414d6c87410ed2d0bafbb2",
+        "mobilesdk_app_id": "1:203129352359:android:5d198fa842865f61deab82",
         "android_client_info": {
           "package_name": "com.edurda77.chessSport"
         }
       },
       "oauth_client": [
         {
-          "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+          "client_id": "203129352359-v8o8alr08ujqmhn110ob3keq9n8rsfpr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBJefjgjGUvhjykBAL8OoaXVnPlIxOyJoc"
+          "current_key": "AIzaSyC5Y0R_9n_8cKN19YQrPIBF0qCxH4Q65wQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:174799647799:android:35d75ae732d13737bafbb2",
-        "android_client_info": {
-          "package_name": "com.edurda77.testsport"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBJefjgjGUvhjykBAL8OoaXVnPlIxOyJoc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "174799647799-ar9soihs6om17b17bqaes8a8qvepq7ai.apps.googleusercontent.com",
+              "client_id": "203129352359-v8o8alr08ujqmhn110ob3keq9n8rsfpr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
