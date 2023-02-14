@@ -1,10 +1,10 @@
-package com.edurda77.chessSport.ui.home
+package betanges.hipgame.ui.home
 
 import android.os.Build
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.BuildConfig
-import com.edurda77.chessSport.data.RemoteData
+import betanges.hipgame.data.RemoteData
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings

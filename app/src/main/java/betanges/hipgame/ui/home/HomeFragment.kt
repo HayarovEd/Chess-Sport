@@ -1,4 +1,4 @@
-package com.edurda77.chessSport.ui.home
+package betanges.hipgame.ui.home
 
 import android.content.Context
 import android.content.Intent
@@ -17,10 +17,10 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import com.edurda77.chessSport.R
-import com.edurda77.chessSport.databinding.FragmentHomeBinding
-import com.edurda77.chessSport.utils.SAVED_SETTINGS
-import com.edurda77.chessSport.utils.URL
+import betanges.hipgame.R
+import betanges.hipgame.databinding.FragmentHomeBinding
+import betanges.hipgame.utils.SAVED_SETTINGS
+import betanges.hipgame.utils.URL
 
 class HomeFragment : Fragment() {
 

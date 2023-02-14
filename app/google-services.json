@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "203129352359",
-    "project_id": "chess-d8552",
-    "storage_bucket": "chess-d8552.appspot.com"
+    "project_number": "898538321248",
+    "project_id": "dgfla-767d5",
+    "storage_bucket": "dgfla-767d5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:203129352359:android:5d198fa842865f61deab82",
+        "mobilesdk_app_id": "1:898538321248:android:bd2f795d37e24606021a05",
         "android_client_info": {
-          "package_name": "com.edurda77.chessSport"
+          "package_name": "betanges.hipgame"
         }
       },
       "oauth_client": [
         {
-          "client_id": "203129352359-v8o8alr08ujqmhn110ob3keq9n8rsfpr.apps.googleusercontent.com",
+          "client_id": "898538321248-ffi8v4u4m0sdrjf7q0cpanp62qf1qs56.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5Y0R_9n_8cKN19YQrPIBF0qCxH4Q65wQ"
+          "current_key": "AIzaSyAavpI2QcyodBPdY6_2hp1NJ04hD4xYjbE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "203129352359-v8o8alr08ujqmhn110ob3keq9n8rsfpr.apps.googleusercontent.com",
+              "client_id": "898538321248-ffi8v4u4m0sdrjf7q0cpanp62qf1qs56.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

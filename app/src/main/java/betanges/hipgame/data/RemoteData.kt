@@ -1,4 +1,4 @@
-package com.edurda77.chessSport.data
+package betanges.hipgame.data
 
 data class RemoteData(
     val urlPath: String

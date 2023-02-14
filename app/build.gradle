@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.edurda77.chessSport'
+    namespace 'betanges.hipgame'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.edurda77.chessSport"
+        applicationId "betanges.hipgame"
         minSdk 21
         targetSdk 33
         versionCode 1

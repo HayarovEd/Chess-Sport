@@ -1,4 +1,4 @@
-package com.edurda77.chessSport.data
+package betanges.hipgame.data
 
 val questions = fun(): List<Quest> {
     val currentList = mutableListOf<Quest>()

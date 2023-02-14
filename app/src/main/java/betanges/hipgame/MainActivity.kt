@@ -1,8 +1,8 @@
-package com.edurda77.chessSport
+package betanges.hipgame
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.edurda77.chessSport.databinding.ActivityMainBinding
+import betanges.hipgame.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

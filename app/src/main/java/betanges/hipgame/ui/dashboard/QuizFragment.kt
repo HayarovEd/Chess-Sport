@@ -1,4 +1,4 @@
-package com.edurda77.chessSport.ui.dashboard
+package betanges.hipgame.ui.dashboard
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.edurda77.chessSport.databinding.FragmentQuizBinding
+import betanges.hipgame.databinding.FragmentQuizBinding
 
 class QuizFragment : Fragment() {
 

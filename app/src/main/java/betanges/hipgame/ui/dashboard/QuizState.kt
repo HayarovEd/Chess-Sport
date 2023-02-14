@@ -1,6 +1,6 @@
-package com.edurda77.chessSport.ui.dashboard
+package betanges.hipgame.ui.dashboard
 
-import com.edurda77.chessSport.data.Quest
+import betanges.hipgame.data.Quest
 
 sealed class QuizState {
     class Game(val quest: Quest) : QuizState()

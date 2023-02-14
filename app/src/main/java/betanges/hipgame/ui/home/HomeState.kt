@@ -1,6 +1,6 @@
-package com.edurda77.chessSport.ui.home
+package betanges.hipgame.ui.home
 
-import com.edurda77.chessSport.data.RemoteData
+import betanges.hipgame.data.RemoteData
 
 sealed class HomeState {
     class SuccessConnect(

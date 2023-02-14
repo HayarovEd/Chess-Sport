@@ -1,4 +1,4 @@
-package com.edurda77.chessSport.utils
+package betanges.hipgame.utils
 
 const val SAVED_SETTINGS = "settings"
 const val URL = "url"

@@ -1,8 +1,8 @@
-package com.edurda77.chessSport.ui.dashboard
+package betanges.hipgame.ui.dashboard
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.edurda77.chessSport.data.questions
+import betanges.hipgame.data.questions
 
 class QuizViewModel : ViewModel() {
 
@@ -17,21 +17,21 @@ class QuizViewModel : ViewModel() {
 
 
     fun sendAnswer(answer: String) {
-        if (answer ==questions.invoke()[numberQuest].rightAnswer) {
+        if (answer == questions.invoke()[numberQuest].rightAnswer) {
             currrentResult++
         }
-        if (numberQuest==questions.invoke().size-1) {
-            _data.value =  QuizState.Result(currrentResult)
+        if (numberQuest== questions.invoke().size-1) {
+            _data.value = QuizState.Result(currrentResult)
         } else {
             numberQuest++
-            _data.value =  QuizState.Game(questions.invoke()[numberQuest])
+            _data.value = QuizState.Game(questions.invoke()[numberQuest])
         }
     }
 
     fun restart() {
         currrentResult = 0
         numberQuest = 0
-        _data.value =  QuizState.Game(questions.invoke()[numberQuest])
+        _data.value = QuizState.Game(questions.invoke()[numberQuest])
     }
 
 
