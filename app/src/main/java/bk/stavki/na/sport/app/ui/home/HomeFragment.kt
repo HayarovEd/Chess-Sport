@@ -58,7 +58,6 @@ class HomeFragment : Fragment() {
                     currentState =  state
                 }
                 is NoInternet -> {
-                    Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
                     binding.startBt.isVisible = true
                     currentState =  state
                 }
@@ -72,7 +71,6 @@ class HomeFragment : Fragment() {
                 is Error -> {
                     binding.startBt.isVisible = true
                     currentState =  state
-                    Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -83,7 +81,7 @@ class HomeFragment : Fragment() {
                     startActivity(browserIntent)
                     Handler(Looper.getMainLooper()).postDelayed({
                         view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
-                    }, 2000)
+                    }, 500)
                 }
                 else -> {
                     view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)
