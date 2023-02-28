@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="betanges.hipgame.ui.home.HomeFragment"
+        android:name="bk.stavki.na.sport.app.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="betanges.hipgame.ui.dashboard.QuizFragment"
+        android:name="bk.stavki.na.sport.app.ui.dashboard.QuizFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_quiz" />
 </navigation>

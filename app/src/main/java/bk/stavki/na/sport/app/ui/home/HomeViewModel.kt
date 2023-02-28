@@ -1,10 +1,14 @@
-package betanges.hipgame.ui.home
+package bk.stavki.na.sport.app.ui.home
 
 import android.os.Build
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.BuildConfig
-import betanges.hipgame.data.RemoteData
+import bk.stavki.na.sport.app.data.RemoteData
+import bk.stavki.na.sport.app.ui.home.HomeState.Error
+import bk.stavki.na.sport.app.ui.home.HomeState.Loading
+import bk.stavki.na.sport.app.ui.home.HomeState.NoInternet
+import bk.stavki.na.sport.app.ui.home.HomeState.SuccessConnect
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
@@ -12,7 +16,7 @@ import java.util.*
 
 class HomeViewModel : ViewModel() {
 
-    private val _showData = MutableLiveData<HomeState>(HomeState.Loading)
+    private val _showData = MutableLiveData<HomeState>(Loading)
     val showData = _showData
     private val remoteConfig = Firebase.remoteConfig
 
@@ -20,9 +24,9 @@ class HomeViewModel : ViewModel() {
         if (pathUrl != "") {
             if (checkedInternetConnection) {
                 _showData.value =
-                    HomeState.SuccessConnect(remoteData = RemoteData(pathUrl))
+                    SuccessConnect(remoteData = RemoteData(pathUrl))
             } else {
-                _showData.value = HomeState.NoInternet("No Internet connection")
+                _showData.value = NoInternet("No Internet connection")
             }
         } else {
             if (checkedInternetConnection) {
@@ -36,20 +40,20 @@ class HomeViewModel : ViewModel() {
                             val resultUrl = remoteConfig.getString("url")
                             if (checkIsEmu() || resultUrl == "") {
                                 _showData.value =
-                                    HomeState.Error("Is device - emulator or empty Url")
+                                    Error("Is device - emulator or empty Url")
                             } else {
                                 _showData.value =
-                                    HomeState.SuccessConnect(RemoteData(urlPath = resultUrl))
+                                    SuccessConnect(RemoteData(urlPath = resultUrl))
                             }
                         } else {
-                            HomeState.Error(message = it.result.toString())
+                            Error(message = it.result.toString())
                         }
                     }.addOnFailureListener {
                         _showData.value =
-                            HomeState.Error(message = it.message ?: "Unknown error")
+                            Error(message = it.message ?: "Unknown error")
                     }
             } else {
-                _showData.value = HomeState.NoInternet("No Internet connection")
+                _showData.value = NoInternet("No Internet connection")
             }
 
         }

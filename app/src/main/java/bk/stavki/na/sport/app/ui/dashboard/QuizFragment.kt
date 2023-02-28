@@ -1,4 +1,4 @@
-package betanges.hipgame.ui.dashboard
+package bk.stavki.na.sport.app.ui.dashboard
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import betanges.hipgame.databinding.FragmentQuizBinding
+import bk.stavki.na.sport.app.databinding.FragmentQuizBinding
+import bk.stavki.na.sport.app.ui.dashboard.QuizState.Game
+import bk.stavki.na.sport.app.ui.dashboard.QuizState.Result
 
 class QuizFragment : Fragment() {
 
@@ -29,7 +31,7 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.data.observe(viewLifecycleOwner) { state ->
             when (state) {
-                is QuizState.Game -> {
+                is Game -> {
                     binding.questTv.isVisible = true
                     binding.var1Bt.isVisible = true
                     binding.var2Bt.isVisible = true
@@ -55,7 +57,7 @@ class QuizFragment : Fragment() {
                         viewModel.sendAnswer(state.quest.answer4)
                     }
                 }
-                is QuizState.Result -> {
+                is Result -> {
                     binding.questTv.isVisible = false
                     binding.var1Bt.isVisible = false
                     binding.var2Bt.isVisible = false

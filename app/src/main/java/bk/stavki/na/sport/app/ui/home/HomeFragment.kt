@@ -1,4 +1,4 @@
-package betanges.hipgame.ui.home
+package bk.stavki.na.sport.app.ui.home
 
 import android.content.Context
 import android.content.Intent
@@ -17,10 +17,14 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import betanges.hipgame.R
-import betanges.hipgame.databinding.FragmentHomeBinding
-import betanges.hipgame.utils.SAVED_SETTINGS
-import betanges.hipgame.utils.URL
+import bk.stavki.na.sport.app.R
+import bk.stavki.na.sport.app.databinding.FragmentHomeBinding
+import bk.stavki.na.sport.app.ui.home.HomeState.Error
+import bk.stavki.na.sport.app.ui.home.HomeState.Loading
+import bk.stavki.na.sport.app.ui.home.HomeState.NoInternet
+import bk.stavki.na.sport.app.ui.home.HomeState.SuccessConnect
+import bk.stavki.na.sport.app.utils.SAVED_SETTINGS
+import bk.stavki.na.sport.app.utils.URL
 
 class HomeFragment : Fragment() {
 
@@ -39,7 +43,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        currentState = HomeState.Loading
+        currentState = Loading
         val sharedPref =
             requireContext().getSharedPreferences(SAVED_SETTINGS, Context.MODE_PRIVATE)
         val sharedUrl = sharedPref.getString(URL, "")
@@ -49,23 +53,23 @@ class HomeFragment : Fragment() {
         )
         viewModel.showData.observe(viewLifecycleOwner) { state ->
             when (state) {
-                is HomeState.Loading -> {
+                is Loading -> {
                     binding.startBt.isVisible = false
                     currentState =  state
                 }
-                is HomeState.NoInternet -> {
+                is NoInternet -> {
                     Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
                     binding.startBt.isVisible = true
                     currentState =  state
                 }
-                is HomeState.SuccessConnect -> {
+                is SuccessConnect -> {
                     binding.startBt.isVisible = true
                     val editor = sharedPref.edit()
                     editor.putString(URL, state.remoteData.urlPath)
                     editor.apply()
                     currentState =  state
                 }
-                is HomeState.Error -> {
+                is Error -> {
                     binding.startBt.isVisible = true
                     currentState =  state
                     Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
@@ -74,8 +78,8 @@ class HomeFragment : Fragment() {
         }
         binding.startBt.setOnClickListener {
             when (currentState) {
-                is HomeState.SuccessConnect -> {
-                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse((currentState as HomeState.SuccessConnect).remoteData.urlPath))
+                is SuccessConnect -> {
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse((currentState as SuccessConnect).remoteData.urlPath))
                     startActivity(browserIntent)
                     Handler(Looper.getMainLooper()).postDelayed({
                         view.findNavController().navigate(R.id.action_navigation_home_to_navigation_dashboard)

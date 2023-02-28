@@ -5,22 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_rect"
-    tools:context="betanges.hipgame.ui.home.HomeFragment">
+    android:background="@drawable/background_image"
+    tools:context="bk.stavki.na.sport.app.ui.home.HomeFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:textAlignment="center"
         android:text="@string/begin"
-        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/white"
         android:background="@drawable/button_rect"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,8 @@
-package betanges.hipgame
+package bk.stavki.na.sport.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import betanges.hipgame.databinding.ActivityMainBinding
+import bk.stavki.na.sport.app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

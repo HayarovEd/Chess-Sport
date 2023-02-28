@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'betanges.hipgame'
+    namespace 'bk.stavki.na.sport.app'
     compileSdk 33
 
     defaultConfig {
-        applicationId "betanges.hipgame"
+        applicationId "bk.stavki.na.sport.app"
         minSdk 21
         targetSdk 33
         versionCode 1

@@ -1,4 +1,4 @@
-package betanges.hipgame.data
+package bk.stavki.na.sport.app.data
 
 data class Quest(
     val quest: String,

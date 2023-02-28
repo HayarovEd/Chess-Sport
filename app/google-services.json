@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "898538321248",
-    "project_id": "dgfla-767d5",
-    "storage_bucket": "dgfla-767d5.appspot.com"
+    "project_number": "640987533985",
+    "project_id": "haviedle",
+    "storage_bucket": "haviedle.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:898538321248:android:bd2f795d37e24606021a05",
+        "mobilesdk_app_id": "1:640987533985:android:8cb5c9577b45ca0d2cd6e0",
         "android_client_info": {
-          "package_name": "betanges.hipgame"
+          "package_name": "bk.stavki.na.sport.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "898538321248-ffi8v4u4m0sdrjf7q0cpanp62qf1qs56.apps.googleusercontent.com",
+          "client_id": "640987533985-i5pd24e1j8kcga5ed7sgl5hva2pm87lv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAavpI2QcyodBPdY6_2hp1NJ04hD4xYjbE"
+          "current_key": "AIzaSyB2TPg0QEcABf8OItK5UaOMNMmxiNZkXhk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "898538321248-ffi8v4u4m0sdrjf7q0cpanp62qf1qs56.apps.googleusercontent.com",
+              "client_id": "640987533985-i5pd24e1j8kcga5ed7sgl5hva2pm87lv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

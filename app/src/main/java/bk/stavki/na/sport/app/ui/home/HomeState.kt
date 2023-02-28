@@ -1,6 +1,6 @@
-package betanges.hipgame.ui.home
+package bk.stavki.na.sport.app.ui.home
 
-import betanges.hipgame.data.RemoteData
+import bk.stavki.na.sport.app.data.RemoteData
 
 sealed class HomeState {
     class SuccessConnect(

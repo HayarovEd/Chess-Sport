@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Flag</string>
+    <string name="app_name">Ставки на спорт</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="begin">Start</string>
+    <string name="begin">START</string>
     <string name="quest">Quest</string>
     <string name="result">Result:</string>
     <string name="repeat">Repeat?</string>

@@ -1,15 +1,17 @@
-package betanges.hipgame.ui.dashboard
+package bk.stavki.na.sport.app.ui.dashboard
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import betanges.hipgame.data.questions
+import bk.stavki.na.sport.app.data.questions
+import bk.stavki.na.sport.app.ui.dashboard.QuizState.Game
+import bk.stavki.na.sport.app.ui.dashboard.QuizState.Result
 
 class QuizViewModel : ViewModel() {
 
     private var currrentResult = 0
     private var numberQuest = 0
     private val _data = MutableLiveData<QuizState>(
-        QuizState.Game(
+        Game(
             quest = questions.invoke()[numberQuest]
         )
     )
@@ -21,17 +23,17 @@ class QuizViewModel : ViewModel() {
             currrentResult++
         }
         if (numberQuest== questions.invoke().size-1) {
-            _data.value = QuizState.Result(currrentResult)
+            _data.value = Result(currrentResult)
         } else {
             numberQuest++
-            _data.value = QuizState.Game(questions.invoke()[numberQuest])
+            _data.value = Game(questions.invoke()[numberQuest])
         }
     }
 
     fun restart() {
         currrentResult = 0
         numberQuest = 0
-        _data.value = QuizState.Game(questions.invoke()[numberQuest])
+        _data.value = Game(questions.invoke()[numberQuest])
     }
 
 
